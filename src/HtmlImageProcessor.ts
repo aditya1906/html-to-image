@@ -8,7 +8,7 @@ export default class HtmlImageProcessor {
 
     private readonly header?: HTMLElement
     private readonly footer?: HTMLElement
-    
+
     constructor({header = null, footer = null}: HtmlImageProcessorProps) {
         this.header = header
         this.footer = footer
