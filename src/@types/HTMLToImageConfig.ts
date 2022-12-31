@@ -5,4 +5,5 @@ export interface HTMLToImageConfig {
     main: HTMLElement
     footer?: HTMLElement
     imageFormat?: ImageFormatConstant
+    imageFileName?: string
 }
