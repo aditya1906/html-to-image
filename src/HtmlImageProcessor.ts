@@ -1,13 +1,15 @@
 import {ImageProcessOptions} from "./@types/ImageProcessOptions";
 import html2canvas from "html2canvas";
 import ImageFormatToBase64Type from "./config/ImageFormatTypeMapper";
+import ImageFormatConstant from "./config/ImageFormatConstant";
+import {HtmlImageProcessorProps} from "./@types/HtmlImageProcessorProps";
 
 export default class HtmlImageProcessor {
 
     private readonly header?: HTMLElement
     private readonly footer?: HTMLElement
-
-    constructor({header, footer}) {
+    
+    constructor({header = null, footer = null}: HtmlImageProcessorProps) {
         this.header = header
         this.footer = footer
     }
@@ -40,7 +42,7 @@ export default class HtmlImageProcessor {
     }
 
     private async getBlobImage(canvas: HTMLCanvasElement, imageFormat) {
-        const imageBase64Str = canvas.toDataURL(ImageFormatToBase64Type[imageFormat.toUpperCase()])
+        const imageBase64Str = canvas.toDataURL(ImageFormatToBase64Type[imageFormat.toUpperCase() as ImageFormatConstant])
         const imageResponse = await fetch(imageBase64Str);
 
         return await imageResponse.blob()
