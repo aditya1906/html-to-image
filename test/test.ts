@@ -1,4 +1,4 @@
-import HtmlImageProcessor from "../index";
+import HtmlImageProcessor from "../src";
 
 const documentStr = `
     <style>
