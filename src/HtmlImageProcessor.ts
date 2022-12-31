@@ -6,8 +6,8 @@ import {HtmlImageProcessorProps} from "./@types/HtmlImageProcessorProps";
 
 export default class HtmlImageProcessor {
 
-    private readonly header?: HTMLElement
-    private readonly footer?: HTMLElement
+    private header?: HTMLElement
+    private footer?: HTMLElement
 
     constructor({header, footer}: HtmlImageProcessorProps) {
         this.header = header
