@@ -9,7 +9,7 @@ export default class HtmlImageProcessor {
     private readonly header?: HTMLElement
     private readonly footer?: HTMLElement
 
-    constructor({header = null, footer = null}: HtmlImageProcessorProps) {
+    constructor({header, footer}: HtmlImageProcessorProps) {
         this.header = header
         this.footer = footer
     }
@@ -41,8 +41,8 @@ export default class HtmlImageProcessor {
         return reconstructedDiv;
     }
 
-    private async getBlobImage(canvas: HTMLCanvasElement, imageFormat) {
-        const imageBase64Str = canvas.toDataURL(ImageFormatToBase64Type[imageFormat.toUpperCase() as ImageFormatConstant])
+    private async getBlobImage(canvas: HTMLCanvasElement, imageFormat: ImageFormatConstant) {
+        const imageBase64Str = canvas.toDataURL(ImageFormatToBase64Type[imageFormat])
         const imageResponse = await fetch(imageBase64Str);
 
         return await imageResponse.blob()
