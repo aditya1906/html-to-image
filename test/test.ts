@@ -1,4 +1,4 @@
-import HtmlToImage from "../index";
+import HtmlImageProcessor from "../index";
 
 const documentStr = `
     <style>
@@ -11,5 +11,5 @@ const documentStr = `
 
 const rootDocument = document.createElement('div')
 rootDocument.innerHTML = documentStr
-const base64 = await HtmlToImage.convertNodeToBase64Str({ main: rootDocument })
+const base64 = await HtmlImageProcessor.process({ main: rootDocument })
 console.log(base64)
