@@ -1,10 +1,9 @@
 {
   "name": "html-image-processor",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Converts your HTMLElement to an image in Base64 Encoding Format.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aditya1906/html-to-image"
