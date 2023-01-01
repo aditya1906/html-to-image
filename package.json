@@ -1,6 +1,6 @@
 {
   "name": "html-image-processor",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Converts your HTMLElement to an image in Base64 Encoding Format.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
